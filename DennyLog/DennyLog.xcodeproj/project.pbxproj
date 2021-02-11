@@ -10,6 +10,7 @@
 		B0B95F9A25D4AE9D003407F9 /* DennyLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B95F9025D4AE9D003407F9 /* DennyLog.framework */; };
 		B0B95F9F25D4AE9D003407F9 /* DennyLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B95F9E25D4AE9D003407F9 /* DennyLogTests.swift */; };
 		B0B95FA125D4AE9D003407F9 /* DennyLog.h in Headers */ = {isa = PBXBuildFile; fileRef = B0B95F9325D4AE9D003407F9 /* DennyLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0B95FDE25D4B081003407F9 /* DennyLogImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B95FDD25D4B081003407F9 /* DennyLogImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		B0B95F9925D4AE9D003407F9 /* DennyLogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DennyLogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B95F9E25D4AE9D003407F9 /* DennyLogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DennyLogTests.swift; sourceTree = "<group>"; };
 		B0B95FA025D4AE9D003407F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0B95FDD25D4B081003407F9 /* DennyLogImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DennyLogImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				B0B95F9325D4AE9D003407F9 /* DennyLog.h */,
 				B0B95F9425D4AE9D003407F9 /* Info.plist */,
+				B0B95FDD25D4B081003407F9 /* DennyLogImpl.swift */,
 			);
 			path = DennyLog;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				TargetAttributes = {
 					B0B95F8F25D4AE9D003407F9 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 					B0B95F9825D4AE9D003407F9 = {
 						CreatedOnToolsVersion = 12.3;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0B95FDE25D4B081003407F9 /* DennyLogImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +346,7 @@
 		B0B95FA525D4AE9D003407F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = M79H9K226Y;
@@ -359,6 +365,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -367,6 +374,7 @@
 		B0B95FA625D4AE9D003407F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = M79H9K226Y;
@@ -393,6 +401,7 @@
 		B0B95FA825D4AE9D003407F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M79H9K226Y;
 				INFOPLIST_FILE = DennyLogTests/Info.plist;
@@ -411,6 +420,7 @@
 		B0B95FA925D4AE9D003407F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M79H9K226Y;
 				INFOPLIST_FILE = DennyLogTests/Info.plist;
